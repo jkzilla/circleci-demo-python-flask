@@ -15,6 +15,23 @@ jobs:
       - checkout
       - run: mkdir test-reports
       - run:
+          name: Install Heroku
+          command: |
+            git remote add heroku https://git.heroku.com/joiahdh.git
+            wget https://cli-assets.heroku.com/branches/stable/heroku-linux-amd64.tar.gz
+            sudo mkdir -p /usr/local/lib /usr/local/bin
+            sudo tar -xvzf heroku-linux-amd64.tar.gz -C /usr/local/lib
+            sudo ln -s /usr/local/lib/heroku/bin/heroku /usr/local/bin/heroku
+      - run:
+          name: Install PostgreSQL
+          command: |
+            sudo apt-get update
+            sudo apt-get install postgresql-client-9.6
+      - run:
+          name: Init DB
+          command: |
+            createdb circulate
+      - run:
           name: Download Selenium
           command: |
             curl -O http://selenium-release.storage.googleapis.com/3.5/selenium-server-standalone-3.5.3.jar
@@ -49,13 +66,7 @@ jobs:
       - deploy:
           name: Deploy Master to Heroku
           command: |
-            git remote add heroku https://git.heroku.com/joiahdh.git
-            wget https://cli-assets.heroku.com/branches/stable/heroku-linux-amd64.tar.gz
-            sudo mkdir -p /usr/local/lib /usr/local/bin
-            sudo tar -xvzf heroku-linux-amd64.tar.gz -C /usr/local/lib
-            sudo ln -s /usr/local/lib/heroku/bin/heroku /usr/local/bin/heroku
-            sudo apt-get update
-            sudo apt-get install postgresql-client-9.6
+                       
             cat > ~/.netrc << EOF
             machine api.heroku.com
               login $HEROKU_LOGIN
