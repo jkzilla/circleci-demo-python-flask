@@ -31,6 +31,7 @@ The following commandline instructions are for Mac users. For other operating sy
 ### Create and activate a virtual environment
 
 ```python3 -m venv venv-name```
+
 ```source venv-name/bin/activate```
 
 **Note** For Ubuntu Linux, use `sudo apt-get install python3-venv`.
