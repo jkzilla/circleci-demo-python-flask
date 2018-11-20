@@ -1,8 +1,8 @@
 #!/bin/bash
 git remote add heroku https://git.heroku.com/circleci-demo-python-flask.git
-wget https://cli-assets.heroku.com/branches/stable/heroku-linux-amd64.tar.gz
+wget https://cli-assets.heroku.com/heroku-v7.18.9/heroku-v7.18.9-linux-x64.tar.gz
 sudo mkdir -p /usr/local/lib /usr/local/bin
-sudo tar -xvzf heroku-linux-amd64.tar.gz -C /usr/local/lib
+sudo tar -xvzf heroku-v7.18.9-linux-x64.tar.gz -C /usr/local/lib
 sudo ln -s /usr/local/lib/heroku/bin/heroku /usr/local/bin/heroku
 
 cat > ~/.netrc << EOF
