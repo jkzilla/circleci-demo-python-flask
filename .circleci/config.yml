@@ -49,6 +49,10 @@ jobs:
           command: |
             . venv/bin/activate
             python manage.py test
+      - run:
+          name: mailhog
+          command: |
+           brew update && brew install mailhog
       - store_artifacts:
           path: test-reports/
           destination: tr1
