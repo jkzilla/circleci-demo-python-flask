@@ -31,19 +31,19 @@ class Config:
 class DevelopmentConfig(Config):
     DEBUG = True
     SQLALCHEMY_DATABASE_URI = os.environ.get('DEV_DATABASE_URL') or \
-        'postgresql://localhost/circulate'
+        'postgres://qucpvvzynvhfkk:e04d8ac0fa2c6e9f9fa465adbe640c548a3a65f22ea2c6f7324e2fdc196ddf7e@ec2-50-17-203-51.compute-1.amazonaws.com:5432/d3c28aj8i1bgqq'
 
 
 class TestingConfig(Config):
     TESTING = True
     SQLALCHEMY_DATABASE_URI = os.environ.get('TEST_DATABASE_URL') or \
-        'postgresql://localhost/circulate'
+        'postgres://qucpvvzynvhfkk:e04d8ac0fa2c6e9f9fa465adbe640c548a3a65f22ea2c6f7324e2fdc196ddf7e@ec2-50-17-203-51.compute-1.amazonaws.com:5432/d3c28aj8i1bgqq'
     WTF_CSRF_ENABLED = False
 
 
 class ProductionConfig(Config):
     SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL') or \
-        'postgresql://localhost/circulate'
+        'postgres://qucpvvzynvhfkk:e04d8ac0fa2c6e9f9fa465adbe640c548a3a65f22ea2c6f7324e2fdc196ddf7e@ec2-50-17-203-51.compute-1.amazonaws.com:5432/d3c28aj8i1bgqq
 
     @classmethod
     def init_app(cls, app):
