@@ -49,7 +49,7 @@ jobs:
       - deploy:
           name: Deploy Master to Heroku
           command: |
-            git remote add heroku https://git.heroku.com/jkzilla/circleci-demo-python-flask.git
+            git remote add heroku https://git.heroku.com/joiahdh.git
             wget https://cli-assets.heroku.com/branches/stable/heroku-linux-amd64.tar.gz
             sudo mkdir -p /usr/local/lib /usr/local/bin
             sudo tar -xvzf heroku-linux-amd64.tar.gz -C /usr/local/lib
