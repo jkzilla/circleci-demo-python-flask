@@ -86,6 +86,7 @@ The application also demonstrates how to deploy to Heroku from CircleCI 2.0. Ple
 - test with multiple python versions (3.6.2 and 3.7.1 currently tested)
 - run with coverage on CircleCI
 - make email testing work on CircleCI with mailhog
+- Add authentication/login
     - fix email verification upon registration "A confirmation email has been sent to you by email."
 ```
 2018-11-20T22:19:14.576584+00:00 app[web.1]: raise err
