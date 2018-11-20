@@ -43,7 +43,7 @@ class TestingConfig(Config):
 
 class ProductionConfig(Config):
     SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL') or \
-        'postgres://qucpvvzynvhfkk:e04d8ac0fa2c6e9f9fa465adbe640c548a3a65f22ea2c6f7324e2fdc196ddf7e@ec2-50-17-203-51.compute-1.amazonaws.com:5432/d3c28aj8i1bgqq
+        'postgres://qucpvvzynvhfkk:e04d8ac0fa2c6e9f9fa465adbe640c548a3a65f22ea2c6f7324e2fdc196ddf7e@ec2-50-17-203-51.compute-1.amazonaws.com:5432/d3c28aj8i1bgqq'
 
     @classmethod
     def init_app(cls, app):
