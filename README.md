@@ -87,6 +87,7 @@ The application also demonstrates how to deploy to Heroku from CircleCI 2.0. Ple
 - run with coverage on CircleCI
 - make email testing work on CircleCI with mailhog
     - fix email verification upon registration "A confirmation email has been sent to you by email."
+    - fix forgot password "An email with instructions to reset your password has been sent to you."
 - make email work on the deployed Heroku app
 - fill out test details: See the `tests` directory for details.
 
