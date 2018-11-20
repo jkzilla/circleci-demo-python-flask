@@ -81,10 +81,12 @@ The application also demonstrates how to deploy to Heroku from CircleCI 2.0. Ple
 
 ## TODO
 
+- add registration button on homepage
 - add [parallelization](https://circleci.com/docs/2.0/parallelism-faster-jobs/)
 - test with multiple python versions (3.6.2 and 3.7.1 currently tested)
 - run with coverage on CircleCI
 - make email testing work on CircleCI with mailhog
+    - fix email verification upon registration "A confirmation email has been sent to you by email."
 - make email work on the deployed Heroku app
 - fill out test details: See the `tests` directory for details.
 
