@@ -95,7 +95,7 @@ The application also demonstrates how to deploy to Heroku from CircleCI 2.0. Ple
 2018-11-20T22:19:14.576590+00:00 app[web.1]: ConnectionRefusedError: [Errno 111] Connection refused
 2018-11-20T22:19:14.576591+00:00 app[web.1]:
 2018-11-20T22:19:14.576876+00:00 app[web.1]: 10.11.245.78 - - [20/Nov/2018:22:19:14 +0000] "POST /auth/register HTTP/1.1" 302 229 "https://joiahdh.herokuapp.com/auth/register" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36"
-````
+```
     - fix forgot password "An email with instructions to reset your password has been sent to you."
 - make email work on the deployed Heroku app
 - fill out test details: See the `tests` directory for details.
